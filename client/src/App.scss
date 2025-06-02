@@ -38,7 +38,7 @@
   .bell-curves {
     position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px; // Increased max-width to accommodate more items
     height: 450px;
     margin: 0 auto;
   }
@@ -50,43 +50,6 @@
     bottom: 0;
     transform-origin: center;
     transition: all 0.3s ease;
-
-    /* Z-index for categories (keep as is) */
-    &.ideation {
-      z-index: 9;
-    }
-    &.design {
-      z-index: 8;
-      margin-left: 120px;
-    }
-    &.prototyping {
-      z-index: 7;
-      margin-left: 240px;
-    }
-    &.appdev {
-      z-index: 6;
-      margin-left: 360px;
-    }
-    &.apis {
-      z-index: 5;
-      margin-left: 480px;
-    }
-    &.testing {
-      z-index: 4;
-      margin-left: 600px;
-    }
-    &.dashboarddata {
-      z-index: 3;
-      margin-left: 720px;
-    }
-    &.datascience {
-      z-index: 2;
-      margin-left: 840px;
-    }
-    &.ai {
-      z-index: 1;
-      margin-left: 960px;
-    }
 
     .curve-svg-container {
       position: absolute;
@@ -179,19 +142,8 @@
     &:hover {
       width: 280px;
       height: 411.21px;
-      z-index: 10;
-
-      &.ideation,
-      &.design,
-      &.prototyping,
-      &.appdev,
-      &.apis,
-      &.testing,
-      &.dashboarddata,
-      &.datascience,
-      &.ai {
-        transform: translateX(-70px);
-      }
+      z-index: 11 !important; // Use !important to override inline style on hover
+      transform: translateX(-70px);
 
       .curve-path {
         opacity: 1;
