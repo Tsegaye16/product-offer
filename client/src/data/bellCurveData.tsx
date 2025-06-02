@@ -162,7 +162,7 @@ const bellCurveData: BellCurveData = {
       },
     ],
   },
-  Prototyping: {
+  POCs: {
     icon: "/assets/icons/prototyping.svg",
     color: "#d34e3b",
     textColor: "#FFFFFF",
@@ -205,7 +205,7 @@ const bellCurveData: BellCurveData = {
       },
     ],
   },
-  AppDev: {
+  "App Dev": {
     icon: "/assets/icons/appDev.svg",
     color: "#c1294f",
     textColor: "#FFFFFF",
@@ -550,7 +550,7 @@ const bellCurveData: BellCurveData = {
       },
     ],
   },
-  DashboardData: {
+  "Dashboard & Visualizations": {
     icon: "/assets/icons/dashboardData.svg",
     color: "#3ddce9",
     textColor: "#333",
@@ -593,7 +593,7 @@ const bellCurveData: BellCurveData = {
       },
     ],
   },
-  DataScience: {
+  "Data Science": {
     icon: "/assets/icons/dataScience.svg",
     color: "#11aff3",
     textColor: "#FFFFFF",
@@ -697,243 +697,6 @@ const bellCurveData: BellCurveData = {
     ],
   },
   AI: {
-    icon: "/assets/icons/ai.svg",
-    color: "#0457b3",
-    textColor: "#FFFFFF",
-    items: [
-      {
-        title: "LLM Testing",
-        toolTipTitle: "Large Language Model Testing",
-        description: "Validate and optimize LLMs for performance.",
-        links: [
-          {
-            title: "LLM Test Case",
-            description: "LLM testing example",
-            url: "https://example.com/llm1",
-          },
-        ],
-      },
-      {
-        title: "Model Training",
-        toolTipTitle: "AI Model Training",
-        description: "Train custom AI models for specific use cases.",
-        links: [
-          {
-            title: "Training Demo",
-            description: "Model training example",
-            url: "https://example.com/training1",
-          },
-        ],
-      },
-      {
-        title: "Agent Creation",
-        toolTipTitle: "AI Agent Development",
-        description: "Build intelligent agents for automation.",
-        links: [
-          {
-            title: "Agent Case",
-            description: "AI agent example",
-            url: "https://example.com/agent1",
-          },
-        ],
-      },
-      {
-        title: "Synthetic Users",
-        toolTipTitle: "Synthetic User Generation",
-        description: "Create synthetic users for testing.",
-        links: [
-          {
-            title: "Synthetic User Demo",
-            description: "Synthetic user example",
-            url: "https://example.com/synthetic1",
-          },
-        ],
-      },
-      {
-        title: "Agentic Workflows",
-        toolTipTitle: "Agentic Workflows",
-        description: "Automate processes with AI-driven workflows.",
-        links: [
-          {
-            title: "Workflow Case",
-            description: "Agentic workflow example",
-            url: "https://example.com/workflow1",
-          },
-        ],
-      },
-      {
-        title: "Domain Use Case Exploration",
-        toolTipTitle: "Domain-Specific AI",
-        description: "Explore AI applications for your industry.",
-        links: [
-          {
-            title: "Domain AI Case",
-            description: "Domain-specific AI example",
-            url: "https://example.com/domainai1",
-          },
-        ],
-      },
-    ],
-  },
-  DS: {
-    icon: "/assets/icons/ai.svg",
-    color: "#0457b3",
-    textColor: "#FFFFFF",
-    items: [
-      {
-        title: "LLM Testing",
-        toolTipTitle: "Large Language Model Testing",
-        description: "Validate and optimize LLMs for performance.",
-        links: [
-          {
-            title: "LLM Test Case",
-            description: "LLM testing example",
-            url: "https://example.com/llm1",
-          },
-        ],
-      },
-      {
-        title: "Model Training",
-        toolTipTitle: "AI Model Training",
-        description: "Train custom AI models for specific use cases.",
-        links: [
-          {
-            title: "Training Demo",
-            description: "Model training example",
-            url: "https://example.com/training1",
-          },
-        ],
-      },
-      {
-        title: "Agent Creation",
-        toolTipTitle: "AI Agent Development",
-        description: "Build intelligent agents for automation.",
-        links: [
-          {
-            title: "Agent Case",
-            description: "AI agent example",
-            url: "https://example.com/agent1",
-          },
-        ],
-      },
-      {
-        title: "Synthetic Users",
-        toolTipTitle: "Synthetic User Generation",
-        description: "Create synthetic users for testing.",
-        links: [
-          {
-            title: "Synthetic User Demo",
-            description: "Synthetic user example",
-            url: "https://example.com/synthetic1",
-          },
-        ],
-      },
-      {
-        title: "Agentic Workflows",
-        toolTipTitle: "Agentic Workflows",
-        description: "Automate processes with AI-driven workflows.",
-        links: [
-          {
-            title: "Workflow Case",
-            description: "Agentic workflow example",
-            url: "https://example.com/workflow1",
-          },
-        ],
-      },
-      {
-        title: "Domain Use Case Exploration",
-        toolTipTitle: "Domain-Specific AI",
-        description: "Explore AI applications for your industry.",
-        links: [
-          {
-            title: "Domain AI Case",
-            description: "Domain-specific AI example",
-            url: "https://example.com/domainai1",
-          },
-        ],
-      },
-    ],
-  },
-  AB: {
-    icon: "/assets/icons/ai.svg",
-    color: "#0457b3",
-    textColor: "#FFFFFF",
-    items: [
-      {
-        title: "LLM Testing",
-        toolTipTitle: "Large Language Model Testing",
-        description: "Validate and optimize LLMs for performance.",
-        links: [
-          {
-            title: "LLM Test Case",
-            description: "LLM testing example",
-            url: "https://example.com/llm1",
-          },
-        ],
-      },
-      {
-        title: "Model Training",
-        toolTipTitle: "AI Model Training",
-        description: "Train custom AI models for specific use cases.",
-        links: [
-          {
-            title: "Training Demo",
-            description: "Model training example",
-            url: "https://example.com/training1",
-          },
-        ],
-      },
-      {
-        title: "Agent Creation",
-        toolTipTitle: "AI Agent Development",
-        description: "Build intelligent agents for automation.",
-        links: [
-          {
-            title: "Agent Case",
-            description: "AI agent example",
-            url: "https://example.com/agent1",
-          },
-        ],
-      },
-      {
-        title: "Synthetic Users",
-        toolTipTitle: "Synthetic User Generation",
-        description: "Create synthetic users for testing.",
-        links: [
-          {
-            title: "Synthetic User Demo",
-            description: "Synthetic user example",
-            url: "https://example.com/synthetic1",
-          },
-        ],
-      },
-      {
-        title: "Agentic Workflows",
-        toolTipTitle: "Agentic Workflows",
-        description: "Automate processes with AI-driven workflows.",
-        links: [
-          {
-            title: "Workflow Case",
-            description: "Agentic workflow example",
-            url: "https://example.com/workflow1",
-          },
-        ],
-      },
-      {
-        title: "Domain Use Case Exploration",
-        toolTipTitle: "Domain-Specific AI",
-        description: "Explore AI applications for your industry.",
-        links: [
-          {
-            title: "Domain AI Case",
-            description: "Domain-specific AI example",
-            url: "https://example.com/domainai1",
-          },
-        ],
-      },
-    ],
-  },
-  CD: {
     icon: "/assets/icons/ai.svg",
     color: "#0457b3",
     textColor: "#FFFFFF",

@@ -1,7 +1,7 @@
 import React from "react";
 import { Tooltip } from "react-tooltip";
 import { Item, Link } from "../types";
-import "./sample.scss";
+import "./tooltip.scss";
 
 interface BellCurveItemProps {
   item: Item;
@@ -27,12 +27,7 @@ const BellCurveItem: React.FC<BellCurveItemProps> = ({
       >
         {item.title}
       </li>
-      <Tooltip
-        id={tooltipId}
-        place="right"
-        className="bell-curve-custom-tooltip"
-        clickable
-      >
+      <Tooltip id={tooltipId} className="bell-curve-custom-tooltip" clickable>
         <div className="bell-tooltip-container">
           <div className="bell-tooltip-heading">{item.toolTipTitle}</div>
           <div className="bell-tooltip-text">{item.description}</div>

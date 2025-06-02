@@ -1,9 +1,7 @@
 .App {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
   font-family: "Figtree", "Nunito", sans-serif;
   color: #333;
 
@@ -38,18 +36,29 @@
   .bell-curves {
     position: relative;
     width: 100%;
-    max-width: 1200px; // Increased max-width to accommodate more items
-    height: 450px;
+    max-width: 1200px;
+    height: 450px; // Fixed height for the container of curves
     margin: 0 auto;
   }
 
   .curve {
     position: absolute;
     width: 173.63px;
-    height: 357.98px;
+    height: 357.98px; // Initial height of individual curve
     bottom: 0;
     transform-origin: center;
     transition: all 0.3s ease;
+    @media (max-width: 768px) {
+      width: 123px;
+      height: 230px;
+
+      span {
+        font-size: 0.8rem;
+        top: -30px;
+        width: 90px;
+      }
+    }
+    // zIndex is set by inline style from React component
 
     .curve-svg-container {
       position: absolute;
@@ -70,6 +79,7 @@
     }
 
     span {
+      // Category title above the curve
       position: absolute;
       top: -40px;
       left: 50%;
@@ -84,47 +94,56 @@
     }
 
     .curve-content {
-      display: none;
+      display: none; // Initially hidden, shown on .curve:hover
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      width: 90%;
+      width: 60%; // Use 90% of the curve's width
+      height: 60%; // Use 80% of the curve's height for content
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: center; // Center content vertically if it's smaller than container
       opacity: 0;
       transition: opacity 0.3s ease;
-      z-index: 10;
-    }
+      z-index: 10; // Local z-index for content, .curve:hover handles overall stacking
 
-    .curve-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 10px;
-    }
+      .curve-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 8px; // Slightly reduced margin
+        flex-shrink: 0;
+      }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 0;
-      margin: 0;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-align: center;
-      list-style-position: inside;
-      width: 100%;
-      padding: 0 10px;
-      box-sizing: border-box;
+      ul {
+        list-style-type: disc;
+        padding-left: 0;
+        margin: 0;
+        font-size: 0.75rem; // ADJUSTED: Reduced font size for items
+        font-weight: 500;
+        text-align: center;
+        list-style-position: inside;
+        width: 100%;
+        padding: 0 5px; // ADJUSTED: Reduced horizontal padding for the list itself
+        box-sizing: border-box;
 
-      li {
-        padding-right: 2.5em;
-        padding-left: 2.5em;
-        word-wrap: break-word;
+        // IMPORTANT CHANGES FOR SCROLLING:
+        overflow-y: hidden; // CHANGED: Prevent vertical scrollbar, clip content if it overflows
+        flex-grow: 1; // ADDED: Allow ul to take available space in flex column
+
+        li {
+          padding: 2px 0.5em; // ADJUSTED: Reduced vertical and horizontal padding
+          word-wrap: break-word;
+          line-height: 1.3; // ADJUSTED: Set a specific line height for better control
+        }
       }
     }
 
     .curve-item {
+      // This class seems to be defined but not explicitly used on BellCurveItem's <li>
+      // If it's meant for the <li>, the styles should be merged or applied there.
+      // For now, assuming the 'ul li' styles above are the target.
       margin-bottom: 6px;
       white-space: normal;
       word-break: break-word;
@@ -141,16 +160,26 @@
 
     &:hover {
       width: 280px;
-      height: 411.21px;
-      z-index: 11 !important; // Use !important to override inline style on hover
+      height: 411.21px; // Hovered height of individual curve
+      z-index: 999 !important; // Ensure hovered curve is on top
       transform: translateX(-70px);
+      @media (max-width: 768px) {
+        width: 244px;
+        height: 314px;
+
+        span {
+          font-size: 0.8rem;
+          top: -30px;
+          width: 90px;
+        }
+      }
 
       .curve-path {
         opacity: 1;
       }
 
       .curve-content {
-        display: flex;
+        display: flex; // Show content on hover
         opacity: 1;
       }
     }
