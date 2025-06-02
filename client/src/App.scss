@@ -1,0 +1,158 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  font-family: "Figtree", "Nunito", sans-serif;
+  color: #333;
+
+  .content-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.05em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+    .solutions-text {
+      color: #00797a;
+    }
+  }
+
+  p {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bell-curves {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+  }
+
+  .curve {
+    position: absolute;
+    width: 173.63px;
+    height: 357.98px;
+    bottom: 0;
+    transform-origin: center;
+    transition: all 0.3s ease;
+
+    .curve-svg-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+    }
+
+    .curve-svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .curve-path {
+      transition: all 0.3s ease;
+    }
+
+    span {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #333;
+      white-space: normal;
+      line-height: 1.2;
+    }
+
+    .curve-content {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 90%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+
+    .curve-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 0;
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-align: center;
+      list-style-position: inside;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+
+      li {
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+        word-wrap: break-word;
+      }
+    }
+
+    .curve-item {
+      margin-bottom: 6px;
+      white-space: normal;
+      word-break: break-word;
+      text-align: center;
+      padding-right: 3em;
+      padding-left: 3em;
+      text-indent: -1em;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      width: 280px;
+      height: 411.21px;
+      z-index: 10;
+      transform: translateX(-70px);
+
+      .curve-path {
+        opacity: 1;
+      }
+
+      .curve-content {
+        display: flex;
+        opacity: 1;
+      }
+    }
+  }
+}
