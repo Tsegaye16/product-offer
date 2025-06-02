@@ -51,6 +51,43 @@
     transform-origin: center;
     transition: all 0.3s ease;
 
+    /* Z-index for categories (keep as is) */
+    &.ideation {
+      z-index: 9;
+    }
+    &.design {
+      z-index: 8;
+      margin-left: 120px;
+    }
+    &.prototyping {
+      z-index: 7;
+      margin-left: 240px;
+    }
+    &.appdev {
+      z-index: 6;
+      margin-left: 360px;
+    }
+    &.apis {
+      z-index: 5;
+      margin-left: 480px;
+    }
+    &.testing {
+      z-index: 4;
+      margin-left: 600px;
+    }
+    &.dashboarddata {
+      z-index: 3;
+      margin-left: 720px;
+    }
+    &.datascience {
+      z-index: 2;
+      margin-left: 840px;
+    }
+    &.ai {
+      z-index: 1;
+      margin-left: 960px;
+    }
+
     .curve-svg-container {
       position: absolute;
       width: 100%;
@@ -143,7 +180,18 @@
       width: 280px;
       height: 411.21px;
       z-index: 10;
-      transform: translateX(-70px);
+
+      &.ideation,
+      &.design,
+      &.prototyping,
+      &.appdev,
+      &.apis,
+      &.testing,
+      &.dashboarddata,
+      &.datascience,
+      &.ai {
+        transform: translateX(-70px);
+      }
 
       .curve-path {
         opacity: 1;

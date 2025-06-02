@@ -16,8 +16,6 @@ interface BellCurveData {
 
 const BellCurveContainer: React.FC = () => {
   const categories = Object.keys(bellCurveData);
-  const totalItems = categories.length;
-
   return (
     <div className="bell-curves">
       {categories.map((category, index) => (
@@ -26,7 +24,6 @@ const BellCurveContainer: React.FC = () => {
           category={category}
           data={bellCurveData[category]}
           index={index}
-          totalItems={totalItems}
         />
       ))}
     </div>
