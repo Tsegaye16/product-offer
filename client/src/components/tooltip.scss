@@ -52,6 +52,11 @@
       color: inherit;
       align-items: flex-start;
       width: 100%;
+      .bell-link-index {
+        font-size: 16px;
+        color: #767676;
+        font-weight: 800;
+      }
 
       .bell-link-details {
         display: flex;

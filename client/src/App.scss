@@ -51,12 +51,6 @@
     @media (max-width: 768px) {
       width: 123px;
       height: 230px;
-
-      span {
-        font-size: 0.8rem;
-        top: -30px;
-        width: 90px;
-      }
     }
     // zIndex is set by inline style from React component
 
@@ -91,6 +85,14 @@
       color: #333;
       white-space: normal;
       line-height: 1.2;
+      @media (max-width: 865px) {
+        white-space: nowrap;
+        font-size: 0.8rem;
+
+        transform: translateX(-50%) rotate(-90deg);
+        transform-origin: center bottom; // Rotate around the center of its bottom edge.
+        z-index: 1000;
+      }
     }
 
     .curve-content {
