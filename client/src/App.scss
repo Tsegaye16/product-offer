@@ -39,6 +39,12 @@
     max-width: 1200px;
     height: 450px; // Fixed height for the container of curves
     margin: 0 auto;
+    @media (max-width: 768px) {
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+    }
   }
 
   .curve {
@@ -48,6 +54,7 @@
     bottom: 0;
     transform-origin: center;
     transition: all 0.3s ease;
+
     @media (max-width: 768px) {
       width: 123px;
       height: 230px;
@@ -85,6 +92,7 @@
       color: #333;
       white-space: normal;
       line-height: 1.2;
+      z-index: 10000;
       @media (max-width: 865px) {
         white-space: nowrap;
         font-size: 0.8rem;
@@ -142,39 +150,11 @@
       }
     }
 
-    .curve-item {
-      // This class seems to be defined but not explicitly used on BellCurveItem's <li>
-      // If it's meant for the <li>, the styles should be merged or applied there.
-      // For now, assuming the 'ul li' styles above are the target.
-      margin-bottom: 6px;
-      white-space: normal;
-      word-break: break-word;
-      text-align: center;
-      padding-right: 3em;
-      padding-left: 3em;
-      text-indent: -1em;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
     &:hover {
       width: 280px;
       height: 411.21px; // Hovered height of individual curve
       z-index: 999 !important; // Ensure hovered curve is on top
       transform: translateX(-70px);
-      @media (max-width: 768px) {
-        width: 244px;
-        height: 314px;
-
-        span {
-          font-size: 0.8rem;
-          top: -30px;
-          width: 90px;
-        }
-      }
 
       .curve-path {
         opacity: 1;

@@ -1,46 +1,174 @@
-# Getting Started with Create React App
+# Work Categories Bell Curve Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This React.js component displays work categories in a bell curve diagram, allowing users to explore subcategories and view detailed information in pop-up tooltips. The implementation follows the provided design specifications and requirements.
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+[View Live Demo on Netlify](https://leafy-conkies-2821cb.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<div style="display: flex; justify-content: space-between;">
+  <img src="public/desktop-view.png" alt="" width="45%" />
+  <img src="public/demo2.png" alt="" width="45%" />
 
-### `npm test`
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <img src="public/demo3.png" alt="" width="45%" />
+  <img src="public/demo4.png" alt="" width="45%" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
+## Features
 
-### `npm run build`
+- Interactive bell curve visualization of work categories
+- Hover/tap functionality to reveal subcategories
+- Detailed tooltips with example projects and links
+- Responsive design for desktop and mobile
+- TypeScript implementation with SCSS styling
+- Reusable component structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React.js
+- TypeScript
+- SCSS
+- Next.js (v13) compatible components (Image, Link)
+- Google Fonts (Figtree & Nunito)
+- Netlify (for deployment)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone [repository-url]
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. Run the development server:
 
-## Learn More
+```bash
+npm run dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project is deployed on Netlify with continuous deployment setup. Any push to the main branch will automatically trigger a new deployment.
+
+## Component Structure
+
+```
+src/
+├── components/
+│   ├── BellCurve/
+│   │   ├── BellCurve.tsx          # Main component
+│   │   ├── BellItem.tsx           # Individual bell item
+│   │   ├── SubCategory.tsx        # Subcategory component
+│   │   ├── Tooltip.tsx            # Tooltip component
+│   │   └── styles.module.scss     # Component styles
+├── data/
+│   └── workCategories.json        # Mock data structure
+└── pages/
+    └── index.tsx                  # Demo page
+```
+
+## Data Structure
+
+The component expects data in the following format (example):
+
+```json
+{
+  "Ideation": {
+    "icon": "/icons/ideation.png",
+    "color": "#FFFFFF",
+    "textColor": "#000000",
+    "items": [
+      {
+        "title": "Brainstorming",
+        "toolTipTitle": "Creative Ideation",
+        "toolTipText": "Generate innovative ideas through collaborative sessions",
+        "links": [
+          {
+            "text": "Example Project 01",
+            "desc": "Description of example project",
+            "url": "https://example.com/project1"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Usage
+
+```tsx
+import BellCurve from "../components/BellCurve/BellCurve";
+import workCategories from "../data/workCategories.json";
+
+function WorkCategoriesPage() {
+  return (
+    <div className="work-categories-container">
+      <BellCurve categories={workCategories} />
+    </div>
+  );
+}
+```
+
+## Styling
+
+The component uses SCSS with BEM-like naming conventions to prevent style conflicts:
+
+- All classes are prefixed with `bell-curve__`
+- Mobile styles are implemented using media queries
+- Fonts are imported from Google Fonts
+
+## Testing
+
+The component can be tested by:
+
+1. Hovering/tapping on bell items to reveal subcategories
+2. Hovering/tapping on subcategories to view tooltips
+3. Clicking on links in tooltips (should open in new tab)
+4. Resizing the browser to verify responsive behavior
+5. Visiting the [live demo](https://your-netlify-url.netlify.app/) to verify deployment
+
+## Browser Support
+
+The component has been tested on:
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile Safari
+- Mobile Chrome
+
+## Dependencies
+
+- react
+- react-dom
+- typescript
+- sass
+
+## License
+
+This project is open-source and available under the MIT License.
+
+## Implementation Notes
+
+- The bell curve is implemented using SVG for smooth scaling
+- Animation transitions are implemented with CSS for performance
+- The component is fully typed with TypeScript interfaces
+- All interactive elements are keyboard accessible
+- Proper ARIA attributes are implemented for accessibility
+
+For any issues or questions, please contact the developer.
+
+---
